@@ -1,8 +1,9 @@
-import { Container, Text } from "./styled";
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 import useDragAndDrop from "./hooks/useDragAndDrop";
 import Modal from "../Modal";
+import { Container } from "./styled";
+import { Text } from "../../styles";
 
 const DragAndDropZone = () => {
   const [isOpen, setIsOpen] = React.useState(false);

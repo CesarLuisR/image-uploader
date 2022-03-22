@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface BarProps {
-  size: number;
+  width: number;
 }
 
 export const Container = styled.div`
@@ -27,9 +27,9 @@ export const Bar = styled.div`
   height: 6px;
 `;
 
-export const Load = styled.div<BarProps>`
+export const LoadBar = styled.div<BarProps>`
   background: #2f80ed;
-  width: ${(props) => props.size}%;
+  width: ${(props) => props.width}%;
   height: 100%;
   border-radius: 8px;
 `;

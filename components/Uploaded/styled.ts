@@ -57,22 +57,3 @@ export const FileUrl = styled.a`
   padding: 10px;
   overflow: hidden;
 `;
-
-export const Button = styled.button<{ font?: number }>`
-  background: #2f80ed;
-  border-radius: 8px;
-  padding: 9px 16px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 9px;
-  line-height: 12px;
-  text-align: center;
-  letter-spacing: -0.035em;
-  color: #ffffff;
-  height: 95%;
-  max-height: 34px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-`;

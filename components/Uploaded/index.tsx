@@ -1,15 +1,10 @@
-import { Title } from "../Uploader/styled";
-import {
-  Button,
-  Container,
-  FileUrl,
-  ImageContainer,
-  UrlContainer,
-} from "./styled";
-import Image from "next/image";
 import React from "react";
-import { Context } from "../../contexts/Global/Context";
+import Image from "next/image";
 import Modal from "../Modal";
+import { Context } from "../../contexts/Global/Context";
+import { Container, FileUrl, ImageContainer, UrlContainer } from "./styled";
+import { Title } from "../Uploader/styled";
+import { Button } from "../../styles";
 
 const Uploaded = () => {
   const { file, setFile } = React.useContext(Context);
@@ -37,6 +32,7 @@ const Uploaded = () => {
           {file}
         </FileUrl>
         <Button
+          fontSize="9px"
           onClick={() => {
             navigator.clipboard.writeText(file);
             setIsOpen(true);
@@ -45,9 +41,7 @@ const Uploaded = () => {
           Copy link
         </Button>
       </UrlContainer>
-      <Button onClick={() => setFile("")} font={10}>
-        Get Back
-      </Button>
+      <Button onClick={() => setFile("")}>Get Back</Button>
     </Container>
   );
 };

@@ -34,37 +34,9 @@ export const Subtitle = styled.h2`
   color: #828282;
 `;
 
-export const Text = styled.h3`
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: -0.035em;
-  color: #bdbdbd;
-`;
-
 export const ChooseFileInput = styled.input.attrs((props) => ({
   type: "file",
   accept: "image/png, image/jpeg",
 }))`
   display: none;
-`;
-
-export const ChooseFileButton = styled.button`
-  background: #2f80ed;
-  border-radius: 8px;
-  font-family: "Noto Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: -0.035em;
-  color: #ffffff;
-  padding: 8px 16px;
-  margin-top: 8px;
-  cursor: pointer;
-  border: none;
-  outline: none;
 `;

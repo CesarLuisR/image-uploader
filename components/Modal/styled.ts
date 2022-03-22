@@ -39,22 +39,5 @@ export const ContentContainer = styled.div`
   text-align: center;
   letter-spacing: -0.035em;
   color: #4f4f4f;
-`;
-
-export const Button = styled.button`
-  font-family: "Noto Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  letter-spacing: -0.035em;
-  color: #ffffff;
-  background: #2f80ed;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  padding: 10px 20px;
-  margin-top: 20px;
-  cursor: pointer;
+  margin-bottom: 20px;
 `;

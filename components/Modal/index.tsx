@@ -1,8 +1,28 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { Container, IconContainer, ContentContainer, Button } from "./styled";
+import { Container, IconContainer, ContentContainer } from "./styled";
+import { Button } from "../../styles";
 
-const Modal = ({ content, icon, color, close }: ModalProps) => {
+type ModalProps = {
+  content: string;
+  icon: string;
+  color: string;
+  close: () => void;
+};
+
+const ModalUI = ({ content, icon, color, close }: ModalProps) => {
+  return (
+    <Container>
+      <IconContainer className="material-icons" color={color}>
+        {icon}
+      </IconContainer>
+      <ContentContainer>{content}</ContentContainer>
+      <Button onClick={close}>Close</Button>
+    </Container>
+  );
+};
+
+const Modal = (props: ModalProps) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -13,23 +33,7 @@ const Modal = ({ content, icon, color, close }: ModalProps) => {
   const container = document.getElementById("modal");
 
   if (!mounted || !container) return null;
-  return mounted
-    ? createPortal(
-        <Container>
-          <IconContainer className="material-icons" color={color}>{icon}</IconContainer>
-          <ContentContainer>{content}</ContentContainer>
-          <Button onClick={close}>Close</Button>
-        </Container>,
-        container
-      )
-    : null;
-};
-
-type ModalProps = {
-  content: string;
-  icon: string;
-  color: string;
-  close: () => void;
+  return createPortal(<ModalUI {...props} />, container);
 };
 
 export default Modal;

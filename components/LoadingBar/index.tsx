@@ -1,12 +1,12 @@
 import { Title } from "../Uploader/styled";
-import { Bar, Container, Load } from "./styled";
+import { Bar, Container, LoadBar } from "./styled";
 
 const LoadingBar = ({ loading }: { loading: number }) => {
   return (
     <Container>
       <Title> Uploading... </Title>
       <Bar>
-        <Load size={loading} />
+        <LoadBar width={loading} />
       </Bar>
     </Container>
   );

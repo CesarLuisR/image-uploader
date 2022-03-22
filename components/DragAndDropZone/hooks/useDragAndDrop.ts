@@ -9,10 +9,7 @@ const useDragAndDrop = (setIsOpen: (state: boolean) => void) => {
     e.preventDefault();
     e.stopPropagation();
 
-    if (!/image/.test(e.dataTransfer.files[0].type)) {
-      console.log(e.dataTransfer.files[0].type);
-      return setIsOpen(true);
-    }
+    if (!/image/.test(e.dataTransfer.files[0].type)) return setIsOpen(true);
 
     readFile(e.dataTransfer.files[0]);
   };

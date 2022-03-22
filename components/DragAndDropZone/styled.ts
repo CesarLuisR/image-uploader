@@ -24,13 +24,3 @@ export const Container = styled.div<ContainerProps>`
     width: 80%;
   }
 `;
-
-export const Text = styled.h3`
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: -0.035em;
-  color: #bdbdbd;
-`;
